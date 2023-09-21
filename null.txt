@@ -1,9 +1,20 @@
-# leap year
-print("enter the year:")
-y = int(input())
-if y % 4 == 0 and y % 100 != 0:
-  print("/n it is a leap year")
-elif y % 400 == 0:
-  print("/n it is a leap year")
+# Linear Search in Python
+
+
+def linearSearch(array, n, x):
+
+  # Going through array sequencially
+  for i in range(0, n):
+    if (array[i] == x):
+      return i
+  return -1
+
+
+array = [2, 4, 0, 1, 9]
+x = 1
+n = len(array)
+result = linearSearch(array, n, x)
+if (result == -1):
+  print("Element not found")
 else:
-  print("/n it is not a leap year")
+  print("Element found at index: ", result)
